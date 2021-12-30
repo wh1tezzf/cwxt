@@ -1,0 +1,18 @@
+<html>
+    {% if error %}
+        <p style=color:#ff0000">{{error}}</p>
+    {% endif %}
+
+    {% if dictionary %}
+        <p style=color:#ff0000">{{dictionary}}</p>
+    {% else %}
+
+    <head>Excel file upload (csv, tsv, csvz, tsvz only)</head>
+    <br>
+    <form class = "grid" action="/result" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" value="选择文件">
+        <input type="submit" name="upload" value="上传">
+
+    </form>
+    {% endif %}
+</html>
